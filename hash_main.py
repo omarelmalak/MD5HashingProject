@@ -279,7 +279,7 @@ def hash(input_string: str) -> str:
 def _round_one(a: str, b: str, c: str, d: str, m_values: list[str], shift_map: dict[int, int], k_values: list[str]) -> \
         tuple[str, str, str, str]:
     """
-    Runs the one round of operations using the initialized values in the main, thereby executing each of the
+    Runs the first round of operations using the initialized values in the main, thereby executing each of the
     "red" boxes that must be run for each round (see diagram).
     """
     for i in range(16):
@@ -313,7 +313,7 @@ def _f_function(b: str, c: str, d: str) -> str:
 def _round_two(a: str, b: str, c: str, d: str, m_values: list[str], shift_map: dict[int, int], k_values: list[str]) -> \
         tuple[str, str, str, str]:
     """
-    Runs the two round of operations using the initialized values in the main, thereby executing each of the
+    Runs the second round of operations using the initialized values in the main, thereby executing each of the
     "red" boxes that must be run for each round (see diagram).
     """
     for i in range(16):
