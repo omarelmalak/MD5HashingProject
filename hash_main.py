@@ -10,17 +10,19 @@ def hash(input_string: str) -> str:
     Takes in input string (attempted password) and provides a MD5 algorithm-based hash result to add to a hash table
     of passwords for an account login system.
 
+    Note: All of the following doctests are included formally in the test_hashing.py PyTest testing file.
+
     ARTICLE EXAMPLE
     >>> res = hash('They are deterministic')
     >>> res
     >>> len(res)
 
-    # SINGLE ELEMENT EXAMPLE (LOWERCASE)
+    SINGLE ELEMENT EXAMPLE (LOWERCASE)
     >>> res = hash('a')
     >>> res
     >>> len(res)
 
-    # SINGLE ELEMENT EXAMPLE (UPPERCASE)
+    SINGLE ELEMENT EXAMPLE (UPPERCASE)
     >>> res = hash('A')
     >>> res
     >>> len(res)
