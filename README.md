@@ -24,7 +24,7 @@ In the spirit of modularizing the algorithm, the following step-by-step brief le
 
 
 3. Next, the algorithm will create the MD5 initialization vectors A, B, C, and D. These vectors will go through four layers of the algorithm per block (denoted by the green box with the label "512-bit message block, M", this corresponds with the green block that will be inputted from the previous step).
-<img width="629" alt="Screenshot 2023-12-24 at 11 01 35 PM" src="https://github.com/omarelmalak/MD5HashingProject/assets/140688960/9a83e0c0-5d0c-46cb-9fb6-a5babd424dfd">
+<img width="628" alt="Screenshot 2023-12-24 at 11 12 54 PM" src="https://github.com/omarelmalak/MD5HashingProject/assets/140688960/225bcd1a-8050-4930-845f-31f9ecea0af8">
 
 Courtesy of Comparitech, function annotations added by me for greater clarity with respect to my Python implementation.
 
