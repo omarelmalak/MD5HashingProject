@@ -24,10 +24,12 @@ In the spirit of modularizing the algorithm, the following step-by-step brief le
 
 3. Next, the algorithm will create the MD5 initialization vectors A, B, C, and D. These vectors will go through four layers of the algorithm per block (denoted by the green box with the label "512-bit message block, M", this corresponds with the green block that will be inputted from the previous step).
 <img width="409" alt="Screenshot 2023-12-24 at 10 17 40 PM" src="https://github.com/omarelmalak/MD5HashingProject/assets/140688960/7501ce12-2531-4805-a396-518fbe7fef29">
-Courtest of Comparitech.
+
+Courtesy of Comparitech.
 
 4. Each of the layers in the above diagram involve performing a set of operations using a specified collection of K-constants, M-values (each is a word-length [32-bit] substring of the green block from earlier) and shift values from the constant shift map. The following is a zoom-in of one such layer:
 <img width="734" alt="Screenshot 2023-12-24 at 9 50 46 PM" src="https://github.com/omarelmalak/MD5HashingProject/assets/140688960/c50e0485-7b37-4b59-8157-69a951512fab">
+
 Courtesy of Comparitech, function annotations added by me for greater clarity with respect to my Python implementation.
 
 5. Finally, after going through all the blocks and feeding the resultant A, B, C, and D vectors at the end of each block to the beginning of the process of the next one, the algorithm performs a wrap-up operation to put the vectors together into one, standardized 32-bit hash that is returned. The result? A one-way encrypted password that gets stored and can be accessed from a hash table for many applications, for instance a login database!
