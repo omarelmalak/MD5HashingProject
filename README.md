@@ -29,7 +29,7 @@ In the spirit of modularizing the algorithm, the following step-by-step brief le
 Courtesy of Comparitech.
 
 
-4. Each of the layers in the above diagram involve performing a set of operations using a specified collection of K-constants, M-values (each is a word-length [32-bit] substring of the green block from earlier) and shift values from the constant shift map. The following is a zoom-in of one such layer:
+4. Each of the layers in the above diagram involve performing a set of operations using a specified collection of K-constants, M-values (each is a word-length [32-bit] substring of the green block from earlier) and shift values from the constant shift map. Each layer will iterate precisely 16 times, feeding the A, B, C, and D vectors through the end of each iteration to the beginning of the next one (and when the layer is done, from the end of that layer to the beginning of the next one). The following is a zoom-in of one such layer:
 <img width="734" alt="Screenshot 2023-12-24 at 9 50 46 PM" src="https://github.com/omarelmalak/MD5HashingProject/assets/140688960/c50e0485-7b37-4b59-8157-69a951512fab">
 
 Courtesy of Comparitech, function annotations added by me for greater clarity with respect to my Python implementation.
