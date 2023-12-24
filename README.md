@@ -22,10 +22,12 @@ In the spirit of modularizing the algorithm, the following step-by-step brief le
 2. The algorithm then, depending on the length of the bit string, recursively constructs 512-bit block representations comprised of padded binary bit strings that make up the password. Such Block objects are then stored in an instantiated BlockCollection object, allowing us to traverse the blocks of bits in the next step.
 <img width="332" alt="Screenshot 2023-12-24 at 10 38 54 PM" src="https://github.com/omarelmalak/MD5HashingProject/assets/140688960/c417027e-e931-4e16-b3fc-e20e018765a2">
 
+
 3. Next, the algorithm will create the MD5 initialization vectors A, B, C, and D. These vectors will go through four layers of the algorithm per block (denoted by the green box with the label "512-bit message block, M", this corresponds with the green block that will be inputted from the previous step).
 <img width="409" alt="Screenshot 2023-12-24 at 10 17 40 PM" src="https://github.com/omarelmalak/MD5HashingProject/assets/140688960/7501ce12-2531-4805-a396-518fbe7fef29">
 
 Courtesy of Comparitech.
+
 
 4. Each of the layers in the above diagram involve performing a set of operations using a specified collection of K-constants, M-values (each is a word-length [32-bit] substring of the green block from earlier) and shift values from the constant shift map. The following is a zoom-in of one such layer:
 <img width="734" alt="Screenshot 2023-12-24 at 9 50 46 PM" src="https://github.com/omarelmalak/MD5HashingProject/assets/140688960/c50e0485-7b37-4b59-8157-69a951512fab">
@@ -34,6 +36,7 @@ Courtesy of Comparitech, function annotations added by me for greater clarity wi
 
 5. Finally, after going through all the blocks and feeding the resultant A, B, C, and D vectors at the end of each block to the beginning of the process of the next one, the algorithm performs a wrap-up operation to put the vectors together into one, standardized 32-bit hash that is returned. The result? A one-way encrypted password that gets stored and can be accessed from a hash table for many applications, for instance a login database!
 <img width="572" alt="Screenshot 2023-12-24 at 8 38 25 PM" src="https://github.com/omarelmalak/MD5HashingProject/assets/140688960/2e9aa064-f32e-4ce6-8511-8bb4599cebbe">
+
 
 
 This brief overview explains the general structure of how the algorithm works. Within the code, each function is documented to support the description indicated in the Comparitech article. Please refer to the article link for a more in-depth description and the in-line and documentation comments in the code for support.
